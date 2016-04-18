@@ -228,7 +228,7 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
-}_
+}
 
 /* Users index */
 .users {
@@ -286,4 +286,11 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.self_introduction {
+  border-style: dotted;
+  border-width: 3px;
+  padding: 10px 5px 10px 20px;
+  border-radius: 10px;
 }
