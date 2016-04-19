@@ -21,16 +21,15 @@ class MicropostsController < ApplicationController
 
   def replay
     if logged_in?
-      # @to_mictopost_id
+      @to_micropost = Micropost.find(params[:id])
       @micropost = current_user.microposts.build
-
     end
   end
 
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content, :picture, :to_user_id)
+      params.require(:micropost).permit(:content, :picture, :to_micropost_id)
     end
 
     def correct_user
