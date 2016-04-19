@@ -20,6 +20,11 @@ class MicropostsController < ApplicationController
   end
 
   def replay
+    if logged_in?
+      # @to_mictopost_id
+      @micropost = current_user.microposts.build
+
+    end
   end
 
   private
