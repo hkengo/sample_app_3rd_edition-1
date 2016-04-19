@@ -106,4 +106,9 @@ class UserTest < ActiveSupport::TestCase
       assert_not michael.feed.include?(post_unfollowed)
     end
   end
+  
+  test "self_introduction should be too long" do
+    @user.self_introduction = "a" * 51
+    assert_not @user.valid?
+  end
 end
