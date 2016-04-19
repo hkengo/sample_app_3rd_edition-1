@@ -19,7 +19,6 @@ class Micropost < ActiveRecord::Base
   #自分をreplayしているmicropostを探す
   def find_replay
     Micropost.where(to_micropost_id: id)
-
   end
 
   private

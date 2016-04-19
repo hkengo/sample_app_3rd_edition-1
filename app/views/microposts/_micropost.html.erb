@@ -12,6 +12,6 @@
     <%= link_to "delete", micropost, method: :delete,
     data: { confirm: "You sure?" } %>
     <% end %>
-    <%= link_to "replay", replay_micropost_url(micropost.id) %>
+    <%= link_to "replay", replay_micropost_url(micropost.id) unless micropost.is_replay_micropost? %>
   </span>
 </li>
