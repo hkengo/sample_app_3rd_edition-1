@@ -18,6 +18,9 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
       
+      <%= f.label :self_introduction, "Self introduction (blank ok)" %>
+      <%= f.text_area :self_introduction, class: 'form-control' %>
+      
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>

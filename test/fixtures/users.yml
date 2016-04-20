@@ -5,6 +5,7 @@ michael:
   admin: true
   activated: true
   activated_at: <%= Time.zone.now %>
+  self_introduction: Hello I am university student.
 
 archer:
   name: Sterling Archer

@@ -10,10 +10,11 @@
     <section class="stats">
       <%= render 'shared/stats' %>
     </section>
-    <section class="self_introduction">
-      <%= render 'shared/self_introduction' %>
-    </section>
+
+      <%= render 'shared/self_introduction' if !current_user.self_introduction.nil? %>
+
   </aside>
+
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>

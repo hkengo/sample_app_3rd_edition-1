@@ -1,5 +1,8 @@
 <%= form_for(@micropost, html: { multipart: true }) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
+
+  <%= f.hidden_field :to_micropost_id, value: @to_micropost.id if !@to_micropost.blank? %>
+
   <div class="field">
     <%= f.text_area :content, placeholder: "Compose new micropost..." %>
   </div>
