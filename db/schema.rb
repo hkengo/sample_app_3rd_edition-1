@@ -50,7 +50,6 @@ ActiveRecord::Schema.define(version: 20160419050138) do
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
     t.text     "self_introduction"
-    t.string   "to_micropost_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
