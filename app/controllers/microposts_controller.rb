@@ -19,7 +19,7 @@ class MicropostsController < ApplicationController
     redirect_to request.referrer || root_url
   end
 
-  def replay
+  def reply
     if logged_in?
       @to_micropost = Micropost.find(params[:id])
       @micropost = current_user.microposts.build

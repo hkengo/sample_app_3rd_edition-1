@@ -7,17 +7,17 @@ class Micropost < ActiveRecord::Base
   validate  :picture_size
 
   #リプライのmicropostの場合true，そうでない場合falseを返す
-  def is_replay_micropost?
+  def reply_present?
    !to_micropost_id.nil?
   end
 
   #リプライされている場合true, そうでない場合falseを返す
-  def is_replayed?
+  def is_replied?
     !!Micropost.find_by(to_micropost_id: id)
   end
 
-  #自分をreplayしているmicropostを探す
-  def find_replay
+  #自分をreplyしているmicropostを探す
+  def find_reply
     Micropost.where(to_micropost_id: id)
   end
 

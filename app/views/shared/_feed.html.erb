@@ -1,13 +1,13 @@
 <% if @feed_items.any? %>
   <ol class="microposts">
     <% @feed_items.each do |feed_item| %>
-      <% unless feed_item.is_replay_micropost? %>
+      <% unless feed_item.reply_present? %>
         <%= render feed_item %>
         
-        <% if feed_item.is_replayed? %>
-          <% feed_item.find_replay.reverse_each do |replay_micropost| %>
-            <div class="replay_micropost">
-              <%= render replay_micropost %>
+        <% if feed_item.is_replied? %>
+          <% feed_item.find_reply.reverse_each do |reply_micropost| %>
+            <div class="reply_micropost">
+              <%= render reply_micropost %>
             </div>
           <% end %>
         <% end %>
