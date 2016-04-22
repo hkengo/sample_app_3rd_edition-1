@@ -15,7 +15,7 @@
     <% unless micropost.is_reply? %>
     <%= form_tag(reply_micropost_path, remote: true) do %>
       <%= hidden_field_tag :reply_id, micropost.id %>
-        <%= submit_tag "Reply",class: "btn-default" %>
+        <%= submit_tag "Reply" %>
       <% end %>
     <% end %>
   </span>
