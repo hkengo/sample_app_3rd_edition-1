@@ -1,2 +1,2 @@
 $("#favorite_form_<%= @micropost.id %>").html("<%= escape_javascript render 'users/unfavorite', micropost: @micropost %>");
-$("#my_favorites").html('⭐️ <%= @user.my_favorites.count %>');
+$("#my_favorites").html('⭐️ <%= current_user.my_favorites.count %>');
