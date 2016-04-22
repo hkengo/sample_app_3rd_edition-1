@@ -1,4 +1,5 @@
 class Micropost < ActiveRecord::Base
+  has_many :replies, class_name: 'Micropost'
   belongs_to :user
   default_scope -> { order('created_at DESC') }
   mount_uploader :picture, PictureUploader
