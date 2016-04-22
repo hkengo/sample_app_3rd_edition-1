@@ -15,4 +15,8 @@ class StaticPagesController < ApplicationController
   
   def contact
   end
+  
+  def reply
+    @reply_id = params[:reply_id]
+  end
 end
